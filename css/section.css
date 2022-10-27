@@ -8,6 +8,14 @@
     padding:5px;
 }
 
+.section__ul{
+    list-style: none;
+}
+
 .section__li--done{
     text-decoration:line-through;
+}
+
+.section__button--delete{
+    margin-right:10px;
 }
