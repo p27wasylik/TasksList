@@ -9,7 +9,6 @@
         render();
     };
 
-
     const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
@@ -59,9 +58,6 @@
 
         document.querySelector(".js-newTask").value = "";
     };
-
-
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();

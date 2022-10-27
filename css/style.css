@@ -1,18 +1,29 @@
-HTML{
+HTML {
     box-sizing: border-box;
 }
 
-*, ::after, ::before{
+*, ::after, ::before {
     box-sizing: inherit;
 }
 
-.body{
-    width:80%;
-    margin:20px auto;
-    background-color:rgb(235, 235, 235);
+.body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(235, 235, 235);
     font-family: 'Lato', sans-serif;
 }
 
-.body__h1{
+.body__h1 {
     font-weight: 900;
+}
+
+.body__h2 {
+    padding: 20px 20px;
+    font-weight: 700;
+    background-color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: 5px solid rgb(231, 231, 231);
+    border-bottom-width: 0px;
+
 }
