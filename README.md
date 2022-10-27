@@ -3,7 +3,7 @@
 ![Tasks List](images/gifForReadme.gif)
 
 ### Demo:
-[Demo](https://p27wasylik.github.io/awasylik/)
+[Demo](https://p27wasylik.github.io/TasksList/)
 
 ### Structur based on
 
