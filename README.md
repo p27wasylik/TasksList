@@ -1,5 +1,7 @@
 # Tasks List
-! [TaskList](images/gifForReadme.gif)
+
+![Tasks List](images/gifForReadme.gif)
+
 ### Demo:
 [Demo](https://p27wasylik.github.io/awasylik/)
 
