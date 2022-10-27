@@ -12,10 +12,19 @@
     list-style: none;
 }
 
+.section__li{
+    width:300px;
+    
+}
+
 .section__li--done{
     text-decoration:line-through;
 }
 
 .section__button--delete{
-    margin-right:10px;
+    margin-left:20px;
+}
+
+.section__button--toggleDone{
+    margin-right:20px;
 }
