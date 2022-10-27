@@ -10,4 +10,9 @@ HTML{
     width:80%;
     margin:20px auto;
     background-color:rgb(235, 235, 235);
+    font-family: 'Lato', sans-serif;
+}
+
+.body__h1{
+    font-weight: 900;
 }

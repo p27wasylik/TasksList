@@ -26,12 +26,15 @@
         for (const task of tasks) {
             htmlString += `
                 
-                <li class="section__li
-                    ${task.done ? " section__li--done\"" : ""}
-                    ">
-                    <button class="section__button--toggleDone js-toggleDone">Status</button>
+                <li class="section__li">
+                    <button class="section__button--toggleDone js-toggleDone">
+                    ${task.done ? "✅" : "🟩"}
+                    </button>
+                    <span
+                    ${task.done ? " class=\"section__span\"" : ""}>
                     ${task.content}
-                    <button class="section__button--delete js-delete">Usuń</button>
+                    </span>
+                    <button class="section__button--delete js-delete">🗑</button>
                 </li>
             `;
         }
@@ -53,6 +56,8 @@
                 toggleTaskDone(index);
             });
         });
+
+        document.querySelector(".js-newTask").value = "";
     };
 
 
