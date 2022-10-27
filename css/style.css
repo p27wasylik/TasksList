@@ -1,0 +1,13 @@
+HTML{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+
+.body{
+    width:80%;
+    margin:20px auto;
+    background-color:rgb(235, 235, 235);
+}
