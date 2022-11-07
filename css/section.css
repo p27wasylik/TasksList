@@ -30,20 +30,35 @@
 }
 
 .section__button--delete {
+    width:30px;
+    height:30px;
     margin-left: 20px;
     border: none;
-    background-color: red;
+    background-color: rgb(190, 4, 4);
     font-size: 20px;
     font-weight: bold;
     color: white;
     text-decoration: none;
+    transition-duration: 0.8s;
+}
+
+.section__button--delete:hover {
+    background-color: rgba(255, 0, 0, 0.692);
 }
 
 .section__button--toggleDone {
+    width:30px;
+    height:30px;
     margin-right: 20px;
     border: none;
-    background-color: white;
+    background-color: rgb(4, 185, 34);
     font-size: 20px;
     font-weight: bold;
+    color: white;
     text-decoration: none;
+    transition-duration: 0.8s;
+}
+
+.section__button--toggleDone:hover {
+    background-color: rgb(1, 248, 42)
 }

@@ -27,7 +27,7 @@
                 
                 <li class="section__li">
                     <button class="section__button--toggleDone js-toggleDone">
-                    ${task.done ? "✅" : "🟩"}
+                    ${task.done ? "✔" : ""}
                     </button>
                     <span
                     ${task.done ? " class=\"section__span\"" : ""}>
