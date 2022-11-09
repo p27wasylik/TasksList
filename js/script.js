@@ -2,7 +2,7 @@
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
+        tasks = tasks.push({
             content: newTaskContent,
         });
 
@@ -10,35 +10,45 @@
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        const tasksWithoutSelectedItem = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        const tasksToggleSelectedItem = [
+            ...tasks[index].done = !tasks[index].done,
+        ];
         render();
-    }
+    };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-                
-                <li class="section__li">
-                    <button class="section__button--toggleDone js-toggleDone">
-                    ${task.done ? "✔" : ""}
-                    </button>
-                    <span
-                    ${task.done ? " class=\"section__span\"" : ""}>
-                    ${task.content}
-                    </span>
-                    <button class="section__button--delete js-delete">🗑</button>
-                </li>
-            `;
+            
+            <li class="section__li">
+                <button class="section__button--toggleDone js-toggleDone">
+                ${task.done ? "✔" : ""}
+                </button>
+                <span
+                ${task.done ? " class=\"section__span\"" : ""}>
+                ${task.content}
+                </span>
+                <button class="section__button--delete js-delete">🗑</button>
+            </li>
+        `;
         }
+    };
 
-        document.querySelector(".js-tasksList").innerHTML = htmlString;
+    document.querySelector(".js-tasksList").innerHTML = htmlString;
+
+    const render = () => {
+
+        renderTasks();
 
         const removeButtons = document.querySelectorAll(".js-delete");
 
