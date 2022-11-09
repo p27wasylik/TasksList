@@ -1,34 +1,37 @@
-{
-    const tasks = [];
+let tasks = [];
 
-    const addNewTask = (newTaskContent) => {
-        tasks = tasks.push({
-            content: newTaskContent,
-        });
 
-        render();
-    };
+const addNewTask = (newTaskContent) => {
+    tasks = [
+        ...tasks,
+        { content: newTaskContent },
+    ];
 
-    const removeTask = (index) => {
-        const tasksWithoutSelectedItem = [
-            ...tasks.slice(0, index),
-            ...tasks.slice(index + 1),
-        ];
-        render();
-    };
+    render();
+};
 
-    const toggleTaskDone = (index) => {
-        const tasksToggleSelectedItem = [
-            ...tasks[index].done = !tasks[index].done,
-        ];
-        render();
-    };
+const removeTask = (index) => {
+    tasks = [
+        ...tasks.slice(0, index),
+        ...tasks.slice(index + 1),
+    ];
+    render();
+};
 
-    const renderTasks = () => {
-        let htmlString = "";
+const toggleTaskDone = (index) => {
+    tasks = [
+        ...tasks.slice(0, index),
+        {...tasks[index], done: !tasks[index].done},
+        ...tasks.slice(index + 1),
+    ];
+    render();
+};
 
-        for (const task of tasks) {
-            htmlString += `
+const renderTasks = () => {
+    let htmlString = "";
+
+    for (const task of tasks) {
+        htmlString += `
             
             <li class="section__li">
                 <button class="section__button--toggleDone js-toggleDone">
@@ -41,53 +44,53 @@
                 <button class="section__button--delete js-delete">🗑</button>
             </li>
         `;
-        }
-    };
+    }
+
 
     document.querySelector(".js-tasksList").innerHTML = htmlString;
+};
 
-    const render = () => {
+const render = () => {
 
-        renderTasks();
+    renderTasks();
 
-        const removeButtons = document.querySelectorAll(".js-delete");
+    const removeButtons = document.querySelectorAll(".js-delete");
 
-        removeButtons.forEach((removeButton, index) => {
-            removeButton.addEventListener("click", () => {
-                removeTask(index);
-            });
+    removeButtons.forEach((removeButton, index) => {
+        removeButton.addEventListener("click", () => {
+            removeTask(index);
         });
+    });
 
-        const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
+    const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
-            toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
-            });
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButton.addEventListener("click", () => {
+            toggleTaskDone(index);
         });
+    });
 
-        document.querySelector(".js-newTask").value = "";
-    };
+    document.querySelector(".js-newTask").value = "";
+};
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
+const onFormSubmit = (event) => {
+    event.preventDefault();
 
-        newTaskContent = document.querySelector(".js-newTask").value.trim();
+    newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-        if (newTaskContent === "") {
-            return;
-        }
+    if (newTaskContent === "") {
+        return;
+    }
 
-        addNewTask(newTaskContent);
+    addNewTask(newTaskContent);
 
-    };
-    const init = () => {
-        render();
+};
+const init = () => {
+    render();
 
-        const form = document.querySelector(".js-form");
+    const form = document.querySelector(".js-form");
 
-        form.addEventListener("submit", onFormSubmit);
-    };
+    form.addEventListener("submit", onFormSubmit);
+};
 
-    init();
-}
+init();

@@ -40,6 +40,7 @@
     color: white;
     text-decoration: none;
     transition-duration: 0.8s;
+    cursor: pointer;
 }
 
 .section__button--delete:hover {
@@ -57,6 +58,7 @@
     color: white;
     text-decoration: none;
     transition-duration: 0.8s;
+    cursor: pointer;
 }
 
 .section__button--toggleDone:hover {

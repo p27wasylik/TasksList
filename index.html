@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,22 +14,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/section.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/div.css">
     <script defer src="js/script.js"></script>
     <title>Lista zadań</title>
 </head>
+
 <body class="body">
     <h1 class="body__h1">Lista zadań</h1>
-    <h2 class="body__h2">Dodaj nowe zadanie</h2>
+    <div class="div">
+        <h2 class="body__h2">Dodaj nowe zadanie</h2>
+    </div>
     <section class="section">
         <form class="form js-form">
             <input type="text" class="form__input js-newTask" placeholder="Co jest do zrobienia?" autofocus>
             <button class="form__button js-addNewTask">Dodaj zadanie</button>
         </form>
     </section>
-    <h2 class="body__h2">Lista zadań</h2>
+    <div class="div">
+        <h2 class="div__h2">Lista zadań</h2>
+        <div class="div__buttons js-buttons">
+            <a class="div__button" href="">ukryj zakończone</a>
+            <a class="div__button" href="">ukończ wszystkie</a>
+        </div>
+    </div>
     <section class="section">
         <ul class="section__ul js-tasksList">
         </ul>
     </section>
 </body>
+
 </html>
