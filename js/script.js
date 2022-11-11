@@ -21,11 +21,12 @@ const removeTask = (index) => {
 const toggleTaskDone = (index) => {
     tasks = [
         ...tasks.slice(0, index),
-        {...tasks[index], done: !tasks[index].done},
+        { ...tasks[index], done: !tasks[index].done },
         ...tasks.slice(index + 1),
     ];
     render();
 };
+
 
 const renderTasks = () => {
     let htmlString = "";
@@ -71,7 +72,17 @@ const render = () => {
     });
 
     document.querySelector(".js-newTask").value = "";
+
+
 };
+
+const allDoneButton = document.querySelector(".js-doneButton");
+allDoneButton.addEventListener("click", () => {
+    tasks = tasks.map((task) => ({
+        ...task, done: true
+    }));
+    render();
+});
 
 const onFormSubmit = (event) => {
     event.preventDefault();
