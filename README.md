@@ -19,6 +19,7 @@
 ### Describe
 
 The webapp is created for lerning purpose, where you can add a to do list item and check it or uncheck it as done or undone. App will refresh automaticly whithout refreshing page.
+There are button for mark all at once as done and other for hide or show tasks that are completed.
 
 > **Note** The course is available on their official webside [Youcode](https://youcode.pl)
 
