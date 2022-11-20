@@ -8,11 +8,12 @@ HTML {
 
 .body {
     width: 80%;
-    margin: 20px auto;
+    margin: 10px auto;
     background-color: rgb(235, 235, 235);
     font-family: 'Lato', sans-serif;
 }
 
 .body__h1 {
     font-weight: 900;
+    padding:0px;
 }
